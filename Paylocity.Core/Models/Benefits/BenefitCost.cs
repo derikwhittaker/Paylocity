@@ -4,7 +4,16 @@ namespace Paylocity.Core.Models.Benefits
 {
     public class BenefitCost
     {
+
+        public BenefitCost(double annualCost, double discountAmount, int payCycles)
+        {
+            AnnualCost = annualCost;
+            DiscountAmount = discountAmount;
+            PayCycles = payCycles;
+        }
+
         public double AnnualCost { get; }
+        public double DiscountAmount { get; }
 
         public double MonthlyCost
         {
@@ -34,10 +43,5 @@ namespace Paylocity.Core.Models.Benefits
 
         public int PayCycles { get; }
 
-        public BenefitCost(double annualCost, int payCycles)
-        {
-            AnnualCost = annualCost;
-            PayCycles = payCycles;
-        }
     }
 }

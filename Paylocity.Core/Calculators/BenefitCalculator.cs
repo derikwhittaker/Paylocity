@@ -30,13 +30,16 @@ namespace Paylocity.Core.Calculators
         public BenefitCost Calculate(Member member, List<Discount> discounts)
         {
             var runningCost = member.IsEmployee ? EmployeeAnnualCost : DependentAnnualCost;
+            var orginalCost = runningCost;
            
             foreach (var discount in discounts)
             {
                 runningCost = (1 - discount.DiscountPercent) * runningCost;
             }
 
-            return new BenefitCost(runningCost, PayCycles);
+            var discountAmount = orginalCost - runningCost;
+
+            return new BenefitCost(runningCost, discountAmount, PayCycles);
         }
     }
 }

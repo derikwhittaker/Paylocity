@@ -29,6 +29,7 @@ namespace Paylocity.Api.Models.Benefits
         public double AnnualCost { get; set; }
         public double MonthlyCost { get; set; }
         public double CycleCost { get; set; }
+        public double DiscountAmount { get; set; }
         public double PayCycles { get; set; }
     }
 
