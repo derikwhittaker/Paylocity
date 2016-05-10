@@ -93,3 +93,6 @@ D:\Dev.Personal\Github\Paylocity\Paylocity\bin\AutoMapper.dll
 D:\Dev.Personal\Github\Paylocity\Paylocity\bin\AutoMapper.xml
 D:\Dev.Personal\Github\Paylocity\Paylocity\bin\Paylocity.Core.dll
 D:\Dev.Personal\Github\Paylocity\Paylocity\bin\Paylocity.Core.pdb
+D:\Dev.Personal\Github\Paylocity\Paylocity\bin\System.Web.Cors.dll
+D:\Dev.Personal\Github\Paylocity\Paylocity\bin\System.Web.Http.Cors.dll
+D:\Dev.Personal\Github\Paylocity\Paylocity\bin\System.Web.Http.Cors.xml

@@ -5,5 +5,4 @@
         public string Name { get; set; }
         public bool IsEmployee { get; set; }
     }
-    
 }

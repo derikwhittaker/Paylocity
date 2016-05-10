@@ -27,6 +27,17 @@ namespace Paylocity.Api.Controllers
             return costResponse;
         }
 
- 
+        [Route("api/Benefits/Costs")]
+        [HttpPost]
+        public BenefitsCostResponse Costs(BenefitsCostRequest request)
+        {
+
+            var costCommand = Mapper.Map<CalculateCostCommand>(request);
+            var costCommandResponse = Mediator.Send(costCommand);
+            
+            var costResponse = Mapper.Map<BenefitsCostResponse>(costCommandResponse);
+            return costResponse;
+        }
+
     }
 }

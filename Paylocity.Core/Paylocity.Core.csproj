@@ -54,9 +54,11 @@
   <ItemGroup>
     <Compile Include="CommandRequestBase.cs" />
     <Compile Include="CommandResultBase.cs" />
+    <Compile Include="Handlers\Benefits\CalculateCostCommand.cs" />
     <Compile Include="Handlers\Benefits\PreviewCostCommand.cs" />
     <Compile Include="Handlers\Benefits\PreviewCostCommandHandler.cs" />
     <Compile Include="Models\Benefits\BenefitCost.cs" />
+    <Compile Include="Models\Benefits\Employee.cs" />
     <Compile Include="Models\Benefits\Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResultStatus.cs" />

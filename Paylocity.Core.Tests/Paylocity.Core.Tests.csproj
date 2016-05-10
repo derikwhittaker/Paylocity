@@ -96,7 +96,7 @@
     <Compile Include="Handlers\Benefits\BenefitCalculatorTests.cs" />
     <Compile Include="Services\DiscountServiceTests.cs" />
     <Compile Include="Services\FirstNameStartsWithADiscountRuleTests.cs" />
-    <Compile Include="Handlers\Benefits\PreviewCostCommandHandlerTests.cs" />
+    <Compile Include="Handlers\Benefits\CalculateCostCommandHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

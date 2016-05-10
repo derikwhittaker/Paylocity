@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="paylocity-app">
+
+    <div class="page-header">
+        <h1>Employee Benefits Calculator</h1>
+    </div>
+
+    <div class="row" >
+        <form class="form-horizontal" data-bind="foreach: employeeVms">
+            <div class="form-group"  data-bind="let: {vm: $data}">
+                <div class="row">
+                    <label class="col-lg-2 control-label">Employee</label>
+                    <div class="col-lg-10">
+                        <div class="pull-left">
+                            <input type="text" class="form-control" placeholder="Employee Name"  data-bind="textInput: employee.Name">
+                        </div>
+                        <div class="pull-left pad-left-10 pad-top-15">
+                            <a class="pull-right" data-bind="click: addDependant"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Dependant </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" data-bind="foreach: employee.Dependants">
+                    <div class="row">
+                        <div class="col-lg-offset-2 pad-top-10">
+                            <label class="col-lg-2 control-label">Dependant</label>
+                            <div class="col-lg-10">
+                                <div class="pull-left">
+                                    <input type="text" class="form-control" placeholder="Dependant Name" data-bind="textInput: Name">
+                                    
+                                </div>
+                                <div class="pull-left pad-left-10 pad-top-15">
+                                    <a class="pull-right" data-bind="click: vm.removeDependant"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Remove </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row pad-top-15">
+                    <div class=" col-lg-2">
+
+                        <a class="pull-right" data-bind="click: recalculateDeductions">Calculate Benefits </a>
+                    </div>
+
+                    <div class="col-lg-offset-1 col-lg-3">
+                        Salary: <span data-bind="text: salary"></span>
+                    </div>
+
+                    <div class="col-lg-3">
+                        Deductions: <span data-bind="text: totalDeductions"></span>
+                    </div>
+
+                    <div class="col-lg-3">
+                        Take Home Salary: <span data-bind="text: postDeductionsSalary"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-offset-10 col-lg-2">
+            <div class="btn btn-default" data-bind="click: addEmployee">Add Employee</div>
+        </div>
+    </div>
+
+</div>
+

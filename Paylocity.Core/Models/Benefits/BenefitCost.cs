@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 namespace Paylocity.Core.Models.Benefits
 {
     public class BenefitCost
@@ -21,7 +23,7 @@ namespace Paylocity.Core.Models.Benefits
             {
                 if (PayCycles > 0)
                 {
-                    return AnnualCost/12;
+                    return Math.Round(AnnualCost / 12, 2);
                 }
 
                 return 0;
@@ -34,7 +36,7 @@ namespace Paylocity.Core.Models.Benefits
             {
                 if (PayCycles > 0)
                 {
-                    return AnnualCost / PayCycles;
+                    return Math.Round( AnnualCost / PayCycles, 2);
                 }
 
                 return 0;

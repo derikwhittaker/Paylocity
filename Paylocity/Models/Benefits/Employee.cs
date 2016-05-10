@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Paylocity.Api.Models.Benefits
@@ -14,13 +11,13 @@ namespace Paylocity.Api.Models.Benefits
 
     public class Employee
     {
-        public string Name { get; set; }
+        public Member Member { get; set; }
 
-        public List<Dependant> Dependants { get; set; } = new List<Dependant>();
+        public List<Member> Dependants { get; set; } = new List<Member>();
 
         public override string ToString()
         {
-            return JsonConvert.SerializeObject(new {Name});
+            return JsonConvert.SerializeObject(this);
         }
     }
 
@@ -31,12 +28,6 @@ namespace Paylocity.Api.Models.Benefits
         public double CycleCost { get; set; }
         public double DiscountAmount { get; set; }
         public double PayCycles { get; set; }
-    }
-
-    public class Dependant
-    {
-        public string Name { get; set; }
-        public bool IsSpouse { get; set; }
 
         public override string ToString()
         {

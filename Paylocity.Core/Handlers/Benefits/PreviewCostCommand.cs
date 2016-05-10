@@ -25,4 +25,5 @@ namespace Paylocity.Core.Handlers.Benefits
             Member = member;
         }
     }
+
 }
